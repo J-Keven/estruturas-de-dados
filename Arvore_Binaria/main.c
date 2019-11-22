@@ -8,6 +8,7 @@ int main(int argc, char const *argv[])
 	arvore = inserir(arvore, 11);
 	arvore = inserir(arvore, 9);
 	arvore = inserir(arvore, 8);
+	arvore = inserir(arvore, 26);
 	arvore = inserir(arvore, 22);
 	MostrarArvore(arvore);
 	return 0;
