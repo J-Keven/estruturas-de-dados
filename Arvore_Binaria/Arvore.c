@@ -12,13 +12,10 @@ No *create(){
 
 No *inserir(No * arvore, int valor){
 	if(arvore == NULL){
-		No * New = (No*)malloc(sizeof(No));
-		New->valor = valor;
-		New->direita = NULL;
-		New->esquerda = NULL;
-		return New;
+		arvore = (No*)calloc(1,sizeof(No));
+		arvore->valor = valor;	
 	}
-	if( valor > arvore->valor){
+	else if( valor > arvore->valor){
 		arvore->direita = inserir(arvore->direita,valor);
 	}
 	else if(valor < arvore->valor){
