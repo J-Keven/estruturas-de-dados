@@ -43,7 +43,15 @@ int BuscaValor(No * arvore,int valor){
 	}
 	return BuscaValor(arvore->esquerda, valor) || BuscaValor(arvore->direita, valor);
 }
-
+int max2(int a, int b){
+	return (a > b) ? a: b;
+}
+int AlturaArvore(No * arvore){
+	if(arvore == NULL){
+		return -1;
+	}
+	return 1 + max2(AlturaArvore(arvore->esquerda),AlturaArvore(arvore->direita));
+}
 void MostrarPre_Ordem(No * arvore){
 	if(arvore != NULL){
 		printf("%d ", arvore->valor);
