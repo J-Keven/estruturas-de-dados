@@ -1,3 +1,3 @@
 # Estruturas de Dados
-## Implementação de Árvore Binaria de Busca
+## Implementação de algumas estruturas de dados.
 
