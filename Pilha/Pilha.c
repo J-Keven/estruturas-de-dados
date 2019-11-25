@@ -70,4 +70,3 @@ int QtdElementos(Topo * pilha){
     for(;pilha != NULL; pilha = pilha->proximo, cont++);
     return cont;
 }
-
