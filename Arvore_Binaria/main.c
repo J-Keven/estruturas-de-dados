@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "arvore.h"
 void Menu();
 int main(int argc, char const *argv[])

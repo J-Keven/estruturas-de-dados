@@ -1,5 +1,7 @@
 #ifndef ARVORE_H
 #define ARVORE_H
+#include <stdio.h>
+#include <stdlib.h>
 typedef struct no No;
 No *create();
 No *inserir(No * arvore, int valor);
