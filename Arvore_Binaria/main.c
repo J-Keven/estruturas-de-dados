@@ -23,27 +23,31 @@ int main(int argc, char const *argv[])
 				scanf(" %d", &valor);
 				printf("Exeste: %s\n", BuscaValor(arvore,valor) ? "Sim": "Nao");
 				break;
-
-			case 3:
+			case 3: 
+				printf("Valor: ");
+				scanf(" %d", &valor);
+				arvore = removeElement(arvore, valor);
+				break;
+			case 4:
 				printf("Altura: %d\n", AlturaArvore(arvore));
 				break;
 
-			case 4:
+			case 5:
 				MostrarPre_Ordem(arvore);
 				printf("\n");
 				break;
 
-			case 5:
+			case 6:
 				MostrarIn_Ordem(arvore);
 				printf("\n");
 				break;
 
-			case 6:
+			case 7:
 				MostrarPos_Ordem(arvore);
 				printf("\n");
 				break;
 
-			case 7:
+			case 8:
 				arvore = DestroiArvore(arvore);
 				printf("\n");
 				break;
@@ -62,11 +66,12 @@ void Menu(){
 	printf("INTERFACE\n");
 	printf(" 1 - Inserir valor\n");
 	printf(" 2 - Buscar valor\n");
-	printf(" 3 - Altura da Arvore\n");
-	printf(" 4 - Mostrar Pre-Ordem\n");
-	printf(" 5 - Mostrar In-Ordem\n");
-	printf(" 6 - Mostrar Pos-Ordem\n");
-	printf(" 7 - Destruir a Arvore\n");
+	printf(" 3 - Remover um Elemento\n");
+	printf(" 4 - Altura da Arvore\n");
+	printf(" 5 - Mostrar Pre-Ordem\n");
+	printf(" 6 - Mostrar In-Ordem\n");
+	printf(" 7 - Mostrar Pos-Ordem\n");
+	printf(" 8 - Destruir a Arvore\n");
 	printf(" 0 - Sair\n");
 
 }

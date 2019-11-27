@@ -24,6 +24,42 @@ No *inserir(No * arvore, int valor){
 	return arvore;
 }
 
+No * removeElement(No * arvore,int valor){
+	if(arvore == NULL){
+		return NULL;
+	}
+	else if(valor < arvore->valor){
+		arvore->esquerda = removeElement(arvore->esquerda, valor);
+	}
+	else if(valor > arvore->valor){
+		arvore->direita = removeElement(arvore->direita, valor);
+	}
+	else if(arvore->direita == NULL && arvore->esquerda == NULL){
+		free(arvore);
+		arvore = NULL;
+	}
+	else if(arvore->direita == NULL){
+		No * aux = arvore->esquerda;
+		free(arvore);
+		arvore =  aux;
+	}
+	else if(arvore->esquerda == NULL){
+		No * aux = arvore->direita;
+		free(arvore);
+		arvore = aux;
+	}
+	else{
+		No * aux = arvore->direita;
+		while(aux->esquerda != NULL){
+			aux = aux->esquerda;
+		}
+		arvore->valor = aux->valor;
+		aux->valor = valor;
+		arvore->direita = removeElement(arvore->direita,valor);
+	}
+	return arvore;
+}
+
 No * DestroiArvore(No * arvore){
 	if(arvore != NULL){
 		arvore->direita = DestroiArvore(arvore->direita);

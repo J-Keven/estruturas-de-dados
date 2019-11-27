@@ -4,6 +4,7 @@ typedef struct no No;
 No *create();
 No *inserir(No * arvore, int valor);
 No *DestroiArvore(No * arvore);
+No * removeElement(No * arvore,int valor);
 int max2(int a, int b);
 int BuscaValor(No * arvore, int valor);
 int AlturaArvore(No * arvore);
