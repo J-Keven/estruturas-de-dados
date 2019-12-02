@@ -3,7 +3,7 @@
 struct fila{
     int value;
     struct fila * next;
-    struct fila * andRow
+    struct fila * andRow;
 };
 
 Fila * criate(){
@@ -11,18 +11,19 @@ Fila * criate(){
 }
 
 Fila * Insert(Fila * row, int value){
-    if(row == NULL){
-        return NULL;
-    }
     Fila *newRow = (Fila *)calloc(1, sizeof(Fila));
     newRow->value = value;
+    if(row == NULL){
+        newRow->andRow = newRow;
+        return newRow;
+    }
     row->andRow->next = newRow;
     row->andRow = newRow;
     return row;
 }
 
 Fila * Remove(Fila * row){
-    if(row != NULL){
+    if(row == NULL){
         return NULL;
     }
     Fila * aux = row->next;
@@ -46,7 +47,7 @@ Fila * Free(Fila * row){
 
 int size(Fila * row){
     int cont = 0;
-    for(; row != NULL; row = row->next);
+    for(; row != NULL; row = row->next, cont++);
     return cont;
 }
 
@@ -65,4 +66,5 @@ void Show(Fila * row){
             printf("%d ", row->value);
         }
     }
+    printf("\n");
 }
