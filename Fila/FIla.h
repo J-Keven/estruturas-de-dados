@@ -5,6 +5,6 @@
 
 typedef struct fila Fila;
 Fila * criate();
-Fila * InsertInList(Fila * fifo, int valor);
-Fila *
+Fila * InsertInRow(Fila * row, int value);
+Fila * ShowFila(Fila * Raw);
 #endif
