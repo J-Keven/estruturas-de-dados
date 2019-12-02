@@ -5,6 +5,10 @@
 
 typedef struct fila Fila;
 Fila * criate();
-Fila * InsertInRow(Fila * row, int value);
-Fila * ShowFila(Fila * Raw);
+Fila * Insert(Fila * row, int value);
+Fila * Remove(Fila * row);
+Fila * Free(Fila * row);
+int size(Fila * row);
+int SeekValue(Fila * row, int value);
+void Show(Fila * Raw);
 #endif
