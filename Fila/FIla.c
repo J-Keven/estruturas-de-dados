@@ -5,6 +5,9 @@ struct fila{
     struct fila * next;
     struct fila * andRow
 };
+Fila * criate(){
+    return NULL;
+}
 
 Fila * InsertInRow(Fila * row, int value){
     if(row == NULL){
@@ -15,4 +18,12 @@ Fila * InsertInRow(Fila * row, int value){
     row->andRow->next = newRow;
     row->andRow = newRow;
     return row;
+}
+
+Fila * ShowFila(Fila * row){
+    if(row != NULL){
+        for(;row != NULL; row = row->next){
+            printf("%d ", row->value);
+        }
+    }
 }
