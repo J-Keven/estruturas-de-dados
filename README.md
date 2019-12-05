@@ -1,3 +1,4 @@
+
 # Estruturas de Dados
 
 Este repositorio é detinado à implementão de algumas estruturas de dados como, fila, pilha, listas e etc.
@@ -9,4 +10,5 @@ Na pasta Árvore Binaria está os códigos da implemetação de uma árvore bin�
 
 A pasta Pilha contém a implemetação de uma pilha com todas as funções básicas para utilizar uma estrutura do tipo pilha. Contém também uma interface(Main.c) para utilizar as funções da Pilha.
 
-
+## Folder Lista_Simples_Encadiada
+Nessa pasta estão os arquivos necessários para utilizar uma lista encadeada simples. No arquivo *lista.c* contém duas formas de inserir valores na lista, uma insere no fim e a outra insere de forma ordenada na lista(*insert_In_Order*).
