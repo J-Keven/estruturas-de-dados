@@ -9,5 +9,6 @@ No * insert_In_Order(No * list, int value);
 No * Delete(No * list, int value);
 No * FreeList(No * list);
 int Search(No * list, int value);
+int list_size(No * list);
 void Show(No * list);
 #endif

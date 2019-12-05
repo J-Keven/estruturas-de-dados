@@ -71,7 +71,18 @@ No * FreeList(No * list){
 }
 
 int Search(No * list, int value){
+    for(;list != NULL; list = list->next){
+        if(list->value == value){
+            return 1;
+        }
+    }
+    return 0;
+}
 
+int list_size(No * list){
+    int count = 0;
+    for(; list != NULL; list = list->next, count++);
+    return count;
 }
 
 void Show(No * list){
