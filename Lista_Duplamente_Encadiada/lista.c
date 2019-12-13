@@ -26,7 +26,7 @@ No * insert_value(No * list, int value){
             aux->next->previous = new;
             aux->next = new;
             new->previous = aux;
-            break;
+            return list;
         }
     }
     if(aux->next == NULL){

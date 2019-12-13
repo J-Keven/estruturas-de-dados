@@ -1,7 +1,7 @@
 #include "lista.h"
 void Menu();
 int main(int argc, char const *argv[]){
-    No * list;
+    No * list = create_list();
     int option, value;
     do{
         Menu();
@@ -15,10 +15,10 @@ int main(int argc, char const *argv[]){
         else if(option == 2){
             printf("Digite o valor a ser verificado: ");
             scanf(" %d",&value);
-            printf("Exixte: %s", search_value(list, value)?"sim": "nao");
+            printf("Exixte: %s\n", search_value(list, value)?"sim": "nao");
         }
         else if(option == 3){
-            printf("Tamnho: %d", list_size(list));
+            printf("Tamnho: %d\n", list_size(list));
         }
         else if(option == 4){
             printf("Primeniro elemento: ");
@@ -40,7 +40,7 @@ int main(int argc, char const *argv[]){
 }
 
 void Menu(){
-    printf("MENU\n");
+    printf("\nMENU\n");
     printf("1 - inserir um valor\n");
     printf("2 - verificar a existencia de um valor\n");
     printf("3 - verficar o tamanho da lista\n");
