@@ -49,13 +49,49 @@ void frist_value(No * list){
     printf("%d\n", list->value);
 }
 
-void show_list(No* list){
+void show(No* list){
     for(;list != NULL; list = list->next){
         printf("%d ", list->value);
     }
     printf("\n");
 }
 
-int list_size(){
-    
+int list_size(No * list){
+    int count = 0;
+    for(; list != NULL; list = list->next, count++);
+    return count;
 }  
+
+No * delete(No * list, int value){
+    if(list != NULL){
+        No * aux = list->next;
+        if(list->value == value){
+            free(list);
+            list = aux;
+        }
+        else{
+            for(;aux->next != NULL; aux = aux->next){
+                if(aux->value == value){
+                    aux->previous->next = aux->next;
+                    aux->next->previous = aux->previous;
+                    free(aux);
+                    break;
+                }
+            }
+            if(aux->value == value){
+                aux->previous->next = NULL;
+                free(aux);
+            }
+        }
+    }
+    return list;
+}
+
+No * list_free(No * list){
+    while(list != NULL){
+        No * aux = list;
+        list = list->next;
+        free(aux);
+    }
+    return list;
+}

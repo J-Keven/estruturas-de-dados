@@ -5,8 +5,10 @@
 typedef struct no No;
 No * create_list();
 No * insert_value(No * list, int value);
-void show_list(No* list);
+No * delete(No * list, int value);
+No * list_free(No * list);
 int search_value(No * list, int value);
+int list_size(No * list);
+void show(No* list);
 void frist_value(No * list);
-void show_list(No* list);
 #endif
