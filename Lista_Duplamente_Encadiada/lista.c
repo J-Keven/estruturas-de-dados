@@ -56,4 +56,6 @@ void show_list(No* list){
     printf("\n");
 }
 
-int list_size()   
+int list_size(){
+    
+}  

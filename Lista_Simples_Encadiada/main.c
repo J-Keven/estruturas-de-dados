@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
             scanf(" %d", &value);
             list = insert_In_Order(list, value);
         }
-        else if(opcao == 3){
+        else if(opcao == 3){    
             printf("Digite o valor que deseja buscar: ");
             scanf(" %d", &value);
             printf("Esta na lista: %s\n", Search(list, value) ? "Sim": "Nao");

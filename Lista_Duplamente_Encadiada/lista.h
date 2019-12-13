@@ -6,4 +6,7 @@ typedef struct no No;
 No * create_list();
 No * insert_value(No * list, int value);
 void show_list(No* list);
+int search_value(No * list, int value);
+void frist_value(No * list);
+void show_list(No* list);
 #endif
