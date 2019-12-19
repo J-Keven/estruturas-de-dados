@@ -6,6 +6,7 @@ typedef struct no No;
 No * creat();
 No * insert(No * list, int value);
 No * Delete(No * list, int value);
+No * Free_list(No * list);
 int value_search(No * list, int value);
 int frist_value(No * list);
 int list_size(No * list);

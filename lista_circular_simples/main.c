@@ -28,29 +28,20 @@ int main(int argc, char const *argv[])
             break;
 
         case 5:
-            /* code */
+            list_show(list);
             break;
 
         case 6:
-            /* code */
+            printf("Digite o valor que deseja remover: ");
+            scanf(" %d", &value);
+            Delete(list, value);
             break;
 
         case 7:
-            /* code */
+            Free_list(list);
             break;
         }
     }while(opcao != 0);
-    list = insert(list,1);
-    list_show(list);
-    list = insert(list,3);
-    list = insert(list,5);
-    list_show(list);
-    list = insert(list,0);
-    list = insert(list,2);
-    list = insert(list,4);
-    list = insert(list,6);
-    list_show(list);
-    
     return 0;
 }
 void Menu(){
