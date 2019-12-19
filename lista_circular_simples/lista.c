@@ -32,7 +32,7 @@ No * Delete(No * list, int value){
             for(;aux->next != list;aux = aux->next);
             aux->next = list->next;
             free(list);
-            list = aux->next;
+            return aux->next;
         }
         do{
             if(aux->next->value == value){
@@ -47,15 +47,54 @@ No * Delete(No * list, int value){
     }
     return list;
 }
-int value_search(No * list, int value){
-    No * aux = list;
-    do{
-        if(aux->value == value){
-            return 1;
+
+No * Free_list(No * list){
+    if(list != NULL){        
+        No * aux = list->next;
+        while(aux != list){
+            No * rmv = aux;
+            aux = aux->next;
+            free(rmv);
         }
-    }while(aux != list);
+        free(aux);
+    }
+    return NULL;
+}
+
+int value_search(No * list, int value){
+    if(list != NULL){ 
+        No * aux = list;
+        do{
+            if(aux->value == value){
+                return 1;
+            }
+            aux = aux->next;
+        }while(aux != list);
+    }
     return 0;
 }
+
+int list_size(No * list){
+    int count = 0;
+    if(list != NULL){
+        No * aux = list;
+        do{
+            count++;
+            aux = aux->next;
+        }while(aux != list);
+    }
+    return count;
+}
+
+void frist_value(No * list){
+    if(list != NULL){
+        printf("%d\n", list->value);
+    }
+    else{
+        printf("Lista Vazia\n");
+    }
+}
+
 void list_show(No * list){
     if(list != NULL){
         No * aux = list;
@@ -64,6 +103,9 @@ void list_show(No * list){
             aux = aux->next;
         } while (aux != list);
         printf("\n");
+    }
+    else{
+        printf("Lista Vazia\n");
     }
 }
 
