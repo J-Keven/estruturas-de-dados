@@ -11,5 +11,4 @@ int size(No * list);
 int search(No * list, int value);
 void show_frist_value(No * list);
 void list_show(No * list);
-
 #endif
