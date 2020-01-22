@@ -12,3 +12,10 @@ A pasta Pilha contém a implemetação de uma pilha com todas as funções bási
 
 ## Folder Lista_Simples_Encadiada
 Nessa pasta estão os arquivos necessários para utilizar uma lista encadeada simples. No arquivo *lista.c* contém duas formas de inserir valores na lista, uma insere no fim e a outra insere de forma ordenada na lista(*insert_In_Order*).
+
+## Folder Fila
+A pasta fila contem um crud completo de uma estrutura do tipo fila e uma "interfece" para que possa utilizar os mótodos que a fila possue(push, get, delete, show, show Frist value e Fila size).
+
+## Como utilizar os algoritmos acima
+- Para utlizar esse algorimos basta voce clona o repositório para o seu computador.
+- Vá atá a pasta do algoritmo que deseja execultar e execulte o arquivo main e o aquivo .c da biblioteca, já que cada algoritmo está organizado em [TAD's](http://wiki.icmc.usp.br/images/4/4d/Aula2TADparte2y.pdf).
